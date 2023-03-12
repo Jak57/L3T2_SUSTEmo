@@ -92,7 +92,7 @@ in different situations.
 c1, c2 = st.columns([3, 1])
 with c1:
     uploaded_file = st.file_uploader("Upload audio file for predicting it's emotion.")
-    audiofile = "F_01_OISHI_S_1_ANGRY_4.wav"
+    audiofile = "\F_01_OISHI_S_1_ANGRY_4.wav"
 
     if uploaded_file:
         st.audio(uploaded_file)
@@ -109,7 +109,7 @@ with c1:
 
     st.markdown("---")
     st.write(" :singer: **Record audio using microphone.** ")
-    image = Image.open('D:\p350_test\images\mic1.png')
+    image = Image.open('\images\mic1.png')
     new_image = image.resize((25, 25))
     st.image(new_image, caption='')
 
