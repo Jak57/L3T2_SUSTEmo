@@ -92,7 +92,7 @@ in different situations.
 c1, c2 = st.columns([3, 1])
 with c1:
     uploaded_file = st.file_uploader("Upload audio file for predicting it's emotion.")
-    audiofile = "D:\p350_test\F_01_OISHI_S_1_ANGRY_4.wav"
+    audiofile = "F_01_OISHI_S_1_ANGRY_4.wav"
 
     if uploaded_file:
         st.audio(uploaded_file)
