@@ -31,41 +31,14 @@ def extract_feature(file_name, mfcc, chroma, mel):
   return result
 
 
-# filename = "E:\SUBESCO\F_01_OISHI_S_10_ANGRY_1.wav"
-# feature=extract_feature("E:\SUBESCO\F_01_OISHI_S_10_ANGRY_1.wav", mfcc=True, chroma=True, mel=True)
-
-# feature=feature.reshape(1,-1)
-
-# print(feature)
-
-
-    # filename = 'modelForPrediction1.sav'
-    # loaded_model = pickle.load(open(filename, 'rb')) # loading the model file from the storage
-
-    # feature=extract_feature("E:\SUBESCO\F_01_OISHI_S_10_ANGRY_1.wav", mfcc=True, chroma=True, mel=True)
-
-    # print(feature)
-    # feature=feature.reshape(1,-1)
-
-    # prediction=loaded_model.predict(feature)
-    # print(prediction)
-    # return prediction
-
-
 def final_prediction(audiofile):
 
     filename = 'modelForPrediction1.sav'
     loaded_model = pickle.load(open(filename, 'rb')) # loading the model file from the storage
 
     feature=extract_feature(audiofile, mfcc=True, chroma=True, mel=True)
-
-    # print(feature)
     feature=feature.reshape(1,-1)
 
     prediction=loaded_model.predict(feature)
-    # print(prediction)
     return prediction
 
-
-prediction = final_prediction("E:\SUBESCO\F_01_OISHI_S_10_ANGRY_1.wav")
-print(prediction)
