@@ -1,0 +1,2 @@
+# SUSTEmo
+Speech Emotion Recognition
